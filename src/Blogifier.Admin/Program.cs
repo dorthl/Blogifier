@@ -1,8 +1,6 @@
-using Blogifier;
 using Blogifier.Admin;
 using Blogifier.Admin.Interop;
 using Blogifier.Admin.Services;
-using Blogifier.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,8 +14,10 @@ builder.Services.AddLocalization();
 builder.Services.AddOptions();
 
 builder.Services.AddAuthorizationCore(options =>
-  options.AddPolicy(BlogifierSharedConstant.PolicyAdminName, policy =>
-    policy.RequireClaim(BlogifierClaimTypes.Type, BlogifierSharedConstant.PolicyAdminValue)));
+{
+  //options.AddPolicy(BlogifierSharedConstant.PolicyAdminName, policy =>
+  //  policy.RequireClaim(BlogifierClaimTypes.Type, BlogifierSharedConstant.PolicyAdminValue));
+});
 
 builder.Services.AddScoped(sp => new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
 {

@@ -1,4 +1,5 @@
 using Blogifier.Data;
+using Blogifier.Shared;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 

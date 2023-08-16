@@ -1,4 +1,4 @@
-using Blogifier.Identity;
+using Blogifier.Shared;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;

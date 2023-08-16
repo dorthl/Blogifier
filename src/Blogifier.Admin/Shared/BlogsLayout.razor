@@ -18,7 +18,7 @@
         <NavLink class="sidebar-link" href="/admin/blogs/" Match="NavLinkMatch.All">@_localizer["posts"]</NavLink>
         <NavLink class="sidebar-link" href="/admin/blogs/category/">@_localizer["categories"]</NavLink>
         <NavLink class="sidebar-link" href="/admin/blogs/import/">@_localizer["import"]</NavLink>
-        <AuthorizeView Policy="@BlogifierSharedConstant.PolicyAdminName">
+        <AuthorizeView Roles="@BlogifierClaims.RoleAdminValue">
           <hr>
           <NavLink class="sidebar-link" href="/admin/blogs/settings/">@_localizer["settings"]</NavLink>
         </AuthorizeView>
